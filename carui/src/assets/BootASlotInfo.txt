@@ -1,0 +1,65 @@
+
+
+ Book a Slot page
+ 
+ select date
+ 
+ Check for availability 
+ (lets say we take only 5 cars a day)
+ 
+ Enter Vehicle No:
+ Enter RegEmail :
+ Enter MobileNo :
+ 
+ database 
+ -------------------------------
+ table : service_Dashboard
+ 
+ serviceId int auto_increment (primary key)
+ serviceDate  Date
+ vehicleNo integer
+ emailId   varchar
+ mobileNo  varchar 
+ status    varchar 
+ 
+ repository
+ -----------------------------------
+   int checkAvailability(Date inputDate);
+ 
+     select count(*) from service_Dashboard where serviceDate = ?
+	 
+	 inputDate (we have to convert date from java.uti.Date to java.sql.Date)
+	 
+ service 
+ --------------------------------------
+     boolean checkAvailability(Date inputDate)
+	 
+	   if count > 5 return false
+	   else reutrn true 
+	   
+	   
+controller
+-------------------------------------------------
+  werb service to checkAvailability through taking Date as input and return ResponseEntity as output 
+   in ResponseEntity body set the boolean result 
+   
+   
+-------------------------------------------------------
+   test web service from rest client tool
+---------------------------------------------------------------------------------------------------------------
+
+UI
+
+create a component -- bookASlot
+
+   component html -- define button checkAvailability
+   
+   click on this button call function in component .ts 
+   
+   from compoennt ts funciton call fucntion in rest api service
+   
+     from this rest api service function invoke the rest api 
+   
+ 
+	 
+	 

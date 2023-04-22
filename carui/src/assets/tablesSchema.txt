@@ -1,0 +1,30 @@
+
+
+cap_app
+
+  table : car_user
+  table : slot_info
+  
+  
+  private int userId;
+	private String userName;
+	private String password;
+	private String gender;
+	private String mobile;
+	private String vehicleNo;
+	
+	create table car_user(
+	  userId integer primary key auto_increment,
+	  userName varchar(50),
+	  password varchar(50),
+	  gender varchar(15),
+	  mobile integer(15),
+	  vehicleNo varchar(50)
+	);
+	
+	create table slot_info (
+	  serviceId integer primary key auto_increment,
+	  serviceDate date,
+	  status varchar(20),
+	  vehicleNo varchar(20)
+	);

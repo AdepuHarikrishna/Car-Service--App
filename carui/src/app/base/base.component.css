@@ -1,0 +1,36 @@
+
+.container{
+    height:650px;
+}
+header{
+    height:8%;
+    background-color: aqua;
+}
+main{
+    height:85%;
+    background-color: bisque;
+    padding:20px;
+    padding-left:40px;
+    margin-top:20px;
+    margin-bottom:5px;
+    border-radius:5x;
+    overflow-y:scroll;
+}
+footer{
+    height:5%;
+    background-color: cornflowerblue;
+    padding:5px;
+    text-align:center;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+#menu{
+    text-align:center;
+    padding-top:20px;
+}
+#menu a{
+    padding-left: 10px;
+}
+
+

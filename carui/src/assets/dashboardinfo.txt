@@ -1,0 +1,44 @@
+
+
+book a slot
+
+  car controller  -- rquestbody is date
+  vehilceno : hardcode 
+  
+  service  -- date, vehilceno
+  
+  repo  -- date , vehilceno
+  
+   insert into slot_info 
+   
+     service_DAte  -- date
+	 status -- booked
+	 vehicleno -- vehilceNO
+	 
+	 
+display dashboard
+-----
+
+ show info of all vehicles booked for the day and their status 
+ 
+  serviceId  se3rviceDate  vehicleNo  status 
+  
+  
+  /displayDB
+   input is date 
+   
+   pass this date to sergice
+   
+   pass this date to repo 
+   
+    select * from slot_info where serviceDate = ?  --> replace with date from browser 
+	
+	ROwMppaer -- to convert every slot record int slot object 
+	
+	List<Slto>
+	
+	service
+	
+	controller
+	
+	browser 

@@ -1,0 +1,19 @@
+
+#loginPage {
+	/*background-image:url('../../assets/ERS-background.jpg');	*/
+	height:100%;
+}
+.autocompleteOff{
+   
+}
+
+#login{
+	width:60%;
+    margin-left:3%;
+	padding-top:10%;
+	text-align: center;
+}
+
+h3{
+	color:red;
+}

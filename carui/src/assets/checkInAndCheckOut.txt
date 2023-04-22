@@ -1,0 +1,99 @@
+
+
+-- checkin 
+
+car_user  -- vehicle informaiton
+
+slot_info -- serviceId, vehilceNo
+
+car_service
+
+  checkinId  			serviceId  complaints   additionalCheckUps  checkInDate  bill checkOutDate
+  
+  int  auto_inc           int      varchar           varchar         date       integer  date 
+  
+  
+Create pojo class -- CarService
+
+  private int checkInId;
+  privte int serviceId
+  private String complaints;
+  private String[] additionalCheckUps
+  private String checkInDate
+  private int bill
+  private String checkoutDate;
+  
+  
+  {
+     "checkInId" : 0,
+	 "sercviceId" : 3,
+	 "complaints" : "dsfdsfsfsfs",
+	 "additionalCheckUps: ["sdfsf", "sddfs","sdfsf"],
+	 "checkInDate" : "",
+	 "bill" : 3434,
+	 "checkOutDate" : ""
+  }
+ 
+create rest api  for car checkIin
+  @RequestBody CarService carService
+  
+   controlller -- service -- repo
+   
+   
+   convert all strings in array into 1 string 
+   convert date value from string to java.util.Date andthen to java.sql.Date 
+     insert into car_service(serviceId, complaints, additionalCheckUps, checkInDate) values(?, ?, ?, ?);
+  
+-- 
+restapi for generate bill -- checkInId 
+   @RequestParam int checkInId 
+     controller to service to repo 
+	 
+	   get the record from table car_service with given checkInId 
+	    create  arowmapper to convert row into object (CarService)
+   
+   pass on this object to service 
+   
+     method to genewrate bill 
+	   -- serviceCharge + iterate on string[] and sum up all bills 
+	   return billamount 
+	  
+	  pass checkInId and billAMouun to repo
+	   in repo we have to update the record with bill amount 
+	service should return amount
+	controller sould return moutn in ResponseEntity 
+	
+--
+ payBill 
+    @RequestParam checkInId, @Resestparam  int amount 
+    controller  
+	  send them to service 
+	  
+	  check in serv ice whether value we given is matching to bill amont of that checkIn Id 
+	     pass checkInId to repo 
+		 pull the billAmount from repo 
+		 get it to service 
+		 
+		 and compare here 
+		 
+		 if it matches return true
+		 other wes r"Inssuufi9cen tbanalnce";
+  
+  Enum
+    checkUps and thier costs
+	
+	public Enum costs{
+	   serviceCharge(300),
+	   wheelALignment(200),
+	   gearCheckUp(100),
+	   oilsCheckUp(200);
+	   
+	   private int amount;
+	   Costs(int amount){
+	     this.amount = amount;
+	   }
+	   
+	}
+	
+	
+	

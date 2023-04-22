@@ -1,0 +1,20 @@
+#page{
+	height:575px;
+}
+
+#content{
+	 width:90%;
+	 float:left;
+	 margin-left:50px;
+}
+#logout{
+   width:5%;
+   float:right;
+   margin-right:10px;
+}
+a{
+	border:2px solid red;
+	color:white;
+	background-color: blue;
+	padding:8px;
+}

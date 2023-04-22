@@ -1,0 +1,23 @@
+
+<div *ngIf="!bookSlotFlag">
+	<input type="date" [(ngModel)]="slot.serviceDate" placeholder="book date" />
+
+	<br><br>
+
+	<button (click)="checkSlot()" class="primary"> CheckSlot </button>
+
+	<br><br>
+
+
+	
+</div>
+<h3> {{checkSlotResp}} </h3>
+<hr><hr>
+
+<div *ngIf="bookSlotFlag">
+	<input type="text" placeholder="Vehicle No" [(ngModel)]="slot.vehicleNo" disabled />
+
+	<button (click)="bookSlot()"> Book Slot </button>
+
+	<h3> {{slotBookingResponseMsg}} </h3>
+</div>

@@ -1,0 +1,14 @@
+<h2> Welcome to Payment Screen </h2>
+
+<label> CheckInId : </label>
+<input type="number" placeholder="CheckInId" [(ngModel)]="checkInId" />  <br><br>
+
+<button (click)="generateBill()"> Generate Bill </button>
+
+<h3> {{generateRespMsg}} </h3>
+
+<hr><hr>
+
+<button (click)="payBill()" > Update Pay Bill </button>
+
+<h3> {{payBillRespMsg}} </h3>

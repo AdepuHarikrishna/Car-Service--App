@@ -1,0 +1,18 @@
+
+<div id="loginPage">
+	<div id="login">
+	  
+	  
+		 <input [(ngModel)]="userObj.userName" type="text" placeholder="UserName" />
+		 <br><br>
+
+		<input type="password" placeholder="password" 
+		 [(ngModel)]="userObj.password" />  <br><br>
+
+		<button (click)="validateLogin()" > Submit </button>  <br><br>
+
+		<h3> {{loginErrMsg}} </h3>
+	  
+	</div>
+
+</div>

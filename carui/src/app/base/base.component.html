@@ -1,0 +1,42 @@
+<div class="container">
+  <header>
+    <div class="row">
+    
+      <div id="logo" class="col-2">
+         <img src="../assets/logo.jpg" width="80px" height="70px"  />
+      </div>
+      <div id="menu" class="col-8">    
+                           
+          <a routerLink="home">Home</a>
+          
+          <a routerLink="bookslot">BookASlot</a>
+          <a routerLink="checkIn"> CheckInCar </a>
+          <a routerLink="dashboard"> DashBoard </a>
+
+          <a routerLink="bill"> Payment </a>
+        
+      </div>
+      <div id="loggedInUser" class="col-2">
+       
+      </div> 
+    </div> 
+   </header>
+  <main>
+    <div class="row">
+      <div class="col-2">
+
+      </div>    
+        <div id="mainContent" class="col-xs-8">
+          <router-outlet></router-outlet>
+        </div>
+      <div class="col-xs-8">
+
+      </div>
+   </div>
+  </main>
+  <footer>
+    <div>    
+        CopyRights &copy; Reserved    
+    </div>
+  </footer>
+</div>

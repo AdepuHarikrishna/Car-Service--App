@@ -1,0 +1,42 @@
+
+
+Guidance for Login
+
+  create a component -- loginUser
+  
+  create a menu --loginUser
+  when user clicks on this menu u have to display loginUser.html
+  
+  
+  take username and password 
+  
+  click on a button -- call function in loginUser.ts
+  
+  from here call function in restApiService.ts
+  
+  from here invoke restApi call and look for response
+  
+  deliver response back to loginUser.ts
+  from here we should redirect to homePage of our application
+  
+----------
+
+  CarController -- write a new web servidce to take CarObject
+    now passo this obejct to service 
+	
+	now pass on this object to repo 
+	
+	in repo write count query with matching username and password 
+	
+	return count to service
+	in service if count is not 0 then returnt true
+	
+	else return false
+	
+	in ResponseEntity object 
+	
+	return to controller
+	
+	from controller return back to browser 
+	
+	

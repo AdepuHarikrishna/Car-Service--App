@@ -1,0 +1,25 @@
+create table car_user(
+	  userId integer primary key auto_increment,
+	  userName varchar(50),
+	  password varchar(50),
+	  gender varchar(15),
+	  mobile integer(15),
+	  vehicleNo varchar(50)
+	);
+	
+	create table slot_info (
+	  serviceId integer primary key auto_increment,
+	  serviceDate date,
+	  status varchar(20),
+	  vehicleNo varchar(20)
+	);
+    
+    create table car_service (
+	  checkInId integer primary key auto_increment,
+	  serviceId integer(10),
+	  complaints varchar(50),
+	  additionalCheckUps varchar(50),
+      checkInDate date,
+      bill integer(10),
+      checkOutDate date
+	);
